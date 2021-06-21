@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Trivia - Bienvenida</title>
+</head>
+
+<body>
+    <header class="header">
+        <img class="header__img" src="images/Viajes.png" alt="logoviajes">
+    </header>
+
+    <section class="login">
+
+        <div id="screenone">
+            <h2 class="login__subtitle">Para comenzar coloca tu nombre</h2>
+            <Form class="login__container--form">
+                <input class="input" type="text" id="userName" placeholder="Escribe tu Nombre">
+                <button class="button" onclick="getName()" type="button" value="Jugar">Jugar</button>
+            </Form>
+        </div>
+        <h1>
+            <label class="login__subtitle" id="Greetings"></label>
+        </h1>
+
+
+        <div id="screentwo" hidden="hidden" class="login__subtitle">
+            <button class="button" id="national" onclick="clickNationalButton()">National</button>
+            <button class="button" id="international" onclick="clickInternationalButton()">International</button></div>
+
+        <div id="screenthreeInternationalPreguntaOne" hidden="hidden" class="login__subtitle" class="questionblock">
+
+            <h1>¿SABES DÓNDE SE ENCUENTRAN ESTOS MONUMENTOS?</h1>
+            <h2>¿Sabrías decir dónde están?</h2>
+
+            <img class="questionblock__img" src="images/torres_petronas.jpg" alt="torres_petronas">
+            <p class="question">¿En qué ciudad asiática se alzan las torres Petronas?</p>
+            <label>
+                <input type="radio" id="option1" name="question1" value="wrong">Abu Dabi
+            </label>
+            <label>
+                <input type="radio" id="option2" name="question1" value="correct">Kuala Lumpur
+            </label>
+            <label>
+                <input type="radio" id="option3" name="question1" value="wrong">Hong Kong
+            </label>
+            <label>
+                <button class="button" id="sendAnswersInternational" onclick="nextQuestion1()">Siguiente</button>
+            </label>
+
+        </div>
+        <div id="screenthreeInternationalPreguntatwo" hidden="hidden" class="login__subtitle" class="questionblock">
+            <img class="questionblock__img" src="images/sydney-opera-house-near-the-beautiful-sea-under-the-clear-blue-sky.jpg" alt="operaHouse">
+            <p class="question">¿De qué ciudad es icono este edificio?</p>
+            <label>
+                <input type="radio" id="option4"name="question2" value="correct">Sidney
+            </label>
+            <label>
+                <input type="radio" id="option5" name="question2" value="wrong">Singapur
+            </label>
+            <label><input type="radio" id="option6" name="question2" value="wrong">Reino Unido</label>
+            <label>
+                <button class="button" id="sendAnswersInternational" onclick="nextQuestion2()">Siguiente</button>
+            </label>
+        </div>
+        <div id="screenthreeInternationalPreguntathree" hidden="hidden" class="login__subtitle" class="questionblock">
+            <img class="questionblock__img" src="images/El Monumento_Nacional MonteRushmore.png" alt="Monte_Rushmore">
+            <p class="question">¿En qué estado de Estados Unidos debemos viajar para ver el Monte Rushmore?</p>
+            <label>
+                    <input type="radio" id="option7" name="question3" value="wrong"> Vermont
+                </label>
+            <label>
+                    <input type="radio" id="option8" name="question3" value="wrong"> Texas
+                </label>
+            <label>
+                    <input type="radio" id="option9" name="question3" value="correct"> Dakota del Sur
+                </label>
+            <label>
+                    <button class="button" id="sendAnswersInternational" onclick="result()">Enviar</button>
+                </label>
+            <h1>
+                <label class="login__subtitle" id="resultInternational"></label>
+            </h1>
+            <label>
+                    <button  class="button" id="national" onclick="clickNationalButton()">National</button>
+                </label>
+            <label>
+                    <button class="button"  onclick="getName()" type="button" value="Jugar">Jugar</button>
+                </label>
+
+        </div>
+        <div id="screenthreeNationalPreguntaOne" hidden="hidden" class="login__subtitle" class="questionblock">
+            <h1>¿SABES DÓNDE SE ENCUENTRAN ESTOS LUGARES DE MEXICO</h1>
+            <h2>¿Sabrías decir dónde están?</h2>
+
+
+            <img class="questionblock__img" src="images/peñadebernal.jpg" alt="peñadebernal">
+            <p class="question">¿En donde se encuentra la Peña de Bernal?</p>
+            <label>
+                        <input type="radio" id="option1" name="question1" value="wrong"> Puebla
+                    </label>
+            <label>
+                        <input type="radio" id="option2" name="question1" value="correct"> Querétaro 
+                    </label>
+            <label>
+                        <input type="radio" id="option3" name="question1" value="wrong"> Estado de México
+                    </label>
+            <label>
+                        <button class="button" id="sendAnswersNational" onclick="nextQuestionNational1()">Siguiente</button>
+                    </label>
+
+        </div>
+        <div id="screenthreeNationalPreguntatwo" hidden="hidden" class="login__subtitle" class="questionblock">
+            <img class="questionblock__img" src="images/CHICHENITZA.jpg" alt="CHICHENITZA">
+            <p class="question2">¿En donde se encuentra la Pirámide de Chichen-Itzá?</p>
+            <label>
+                        <input type="radio" id="option4"name="question4" value="wrong"> 
+                        Oaxaca
+                    </label>
+            <label>
+                        <input type="radio" id="option5" name="question2" value="correct"> Yucatán
+                    </label>
+            <label>
+                        <input type="radio" id="option6" name="question2" value="wrong"> Quintana Roo
+                    </label>
+            <label>
+                     <button class="button" id="sendAnswersNational" onclick="nextQuestionNational2()">Siguiente</button>
+                    </label>
+        </div>
+
+        <div id="screenthreeNationalPreguntaThree" hidden="hidden" class="login__subtitle" class="questionblock">
+            <img class="questionblock__img" src="images/Canondelsumidero.jpg" alt="Canondelsumidero">
+            <p class="question">¿En donde se encuentra el Cañon del Sumidero?</p>
+            <label>
+                        <input type="radio" id="option7" name="question3" value="correct"> Chiapas
+                    </label>
+            <label>
+                        <input type="radio" id="option8" name="question3" value="wrong"> Riviera Maya 
+                    </label>
+            <label>
+                        <input type="radio" id="option9" name="question3" value="wrong"> Veracruz
+                    </label>
+            <label>
+                        <button class="button" id="sendAnswersNational" onclick="resultNational()">Enviar</button>
+                    </label>
+            <label>
+                        <button class="button" id="international" onclick="clickInternationalButton()">International</button>
+                    </label>
+            <label>
+                        <button class="button"  onclick="getName()" type="button" value="Jugar">Jugar</button>
+                    </label>
+        </div>
+
+
+
+    </section>
+    <Footer class="footer">
+        <a href="/">Cotizar con nosotros</a>
+        <a href="/">Ofertas</a>
+    </Footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
